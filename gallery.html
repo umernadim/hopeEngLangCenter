@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hope Enlish Language Center</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.min.css"
+        integrity="sha512-9xKTRVabjVeZmc+GUW8GgSmcREDunMM+Dt/GrzchfN8tkwHizc5RP4Ok/MXFFy5rIjJjzhndFScTceq5e6GvVQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <!-- code for navbar  -->
+    <nav id="nav-container"></nav>
+
+    <!-- code for gallery  -->
+    <div id="gallery-container">
+        <div class="heading gallery-head">
+            <h3>Photo <span>Gallery</span></h3>
+        </div>
+        <div class="gallery-box">
+            <div class="gallery-images">
+                <img src="/gallery-images/1.jpg" alt="">
+                <img src="/gallery-images/2.jpg" alt="">
+                <img src="/gallery-images/3.jpg" alt="">
+                <img src="/gallery-images/4.jpg" alt="">
+                <img src="/gallery-images/5.jpg" alt="">
+                <img src="/gallery-images/6.jpg" alt="">
+                <img src="/gallery-images/7.jpg" alt="">
+                <img src="/gallery-images/8.jpg" alt="">
+                <img src="/gallery-images/9.jpg" alt="">
+                <img src="/gallery-images/10.jpg" alt="">
+                <img src="/gallery-images/11.jpg" alt="">
+                <img src="/gallery-images/12.jpg" alt="">
+                <img src="/gallery-images/13.jpg" alt="">
+            </div>
+
+            <div class="gallery-images">
+                <img src="/gallery-images/14.jpg" alt="">
+                <img src="/gallery-images/15.jpg" alt="">
+                <img src="/gallery-images/16.jpg" alt="">
+                <img src="/gallery-images/17.jpg" alt="">
+                <img src="/gallery-images/18.jpg" alt="">
+                <img src="/gallery-images/19.jpg" alt="">
+                <img src="/gallery-images/20.jpg" alt="">
+                <img src="/gallery-images/21.jpg" alt="">
+                <img src="/gallery-images/22.jpg" alt="">
+                <img src="/gallery-images/23.jpg" alt="">
+                <img src="/gallery-images/24.jpg" alt="">
+                <img src="/gallery-images/25.jpg" alt="">
+                <img src="/gallery-images/27.jpg" alt="">
+                <img src="/gallery-images/28.jpg" alt="">
+                <img src="/gallery-images/29.jpg" alt="">
+                <img src="/gallery-images/30.jpg" alt="">
+            </div>
+
+            <div class="gallery-images">
+                <img src="/gallery-images/31.jpg" alt="">
+                <img src="/gallery-images/32.jpg" alt="">
+                <img src="/gallery-images/33.jpg" alt="">
+                <img src="/gallery-images/34.jpg" alt="">
+                <img src="/gallery-images/35.jpg" alt="">
+                <img src="/gallery-images/37.jpg" alt="">
+                <img src="/gallery-images/38.jpg" alt="">
+                <img src="/gallery-images/39.jpg" alt="">
+                <img src="/gallery-images/40.jpg" alt="">
+                <img src="/gallery-images/41.jpg" alt="">
+                <img src="/gallery-images/42.jpg" alt="">
+                <img src="/gallery-images/43.jpg" alt="">
+                <img src="/gallery-images/44.jpg" alt="">
+                <img src="/gallery-images/45.jpg" alt="">
+            </div>
+
+        </div>
+    </div>
+
+    <!-- code for footer  -->
+    <footer id="footer"></footer>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+        integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
+        integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script>
+
+        $(document).ready(() => {
+            $.get('nav.html', (data) => {
+                document.getElementById('nav-container').innerHTML = data;
+
+                // code for responsive navbar 
+                let menubtn = document.getElementById('menu-btn');
+                menubtn.addEventListener('click', function () {
+                    const navContainer = document.getElementById('nav-container');
+                    const navLinks = document.getElementById('nav-links');
+                    navLinks.classList.toggle('show');
+                    if (navLinks.classList.contains('show')) {
+                        navContainer.style.maxHeight = '500px';
+                    } else {
+                        navContainer.style.maxHeight = '80px';
+                    }
+                });
+
+                // code to animate navbar 
+                let tl = gsap.timeline();
+                tl.from('nav h2, nav ul li, nav i', {
+                    y: -30,
+                    opacity: 0,
+                    delay: 0.6,
+                    duration: 0.4,
+                    stagger: 0.1
+                });
+            });
+
+            $.get('footer.html', (data) => {
+                document.getElementById('footer').innerHTML = data;
+            });
+        });
+
+    </script>
+
+</body>
+
+</html>
