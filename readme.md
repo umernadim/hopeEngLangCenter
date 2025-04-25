@@ -1,6 +1,11 @@
 🌐 Frontend Practice Website
 This is a practice project where I implemented my HTML, CSS, and JavaScript skills to build a fully responsive website. The goal was to enhance my frontend development skills and create a visually appealing, interactive web page.
 
+🔒 Some content (such as about the team and other information) has been intentionally hidden or replaced for privacy and educational purposes.
+
+🚀 Live Demo
+🔗 https://umernadim.github.io/hopeEngLangCenter/
+
 🎯 Features
 ✅ Fully Responsive Design 📱💻
 ✅ Smooth Animations & Transitions ✨
